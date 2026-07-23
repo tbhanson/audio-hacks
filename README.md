@@ -37,10 +37,6 @@ the featured voice loud, the others quiet, for one-voice-at-a-time practice.
   clustering near -53 to -54 dB (identical) vs. -13 to -19 dB for a
   correctly-separated MS3 export.
 
-  This is a reconstruction from conversation history rather than a
-  guaranteed-exact copy of the original working script -- replace with
-  your own copy if you still have it.
-
   Usage:
   ```
   ./pairwise_diff.sh <directory-of-mp3s>
