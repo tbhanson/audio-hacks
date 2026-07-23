@@ -6,3 +6,4 @@ compiled/
 \#*
 .\#*
 musescore-rehearsal-export/rehearsal-mp3s-ms3/
+musescore-rehearsal-export/local-config.rktd

@@ -29,11 +29,22 @@
 
 ;; ---------- CONFIGURATION ----------
 
-;; Original score (mscz or mscx), untouched throughout
-;(define SOURCE-SCORE "See_my_friends_SATB_MS4.mscz")
+;; Original score (mscz or mscx), read-only throughout -- this script never
+;; writes to it. Passed as a command-line argument:
+;;   racket rehearsal-export-ms3-workaround.rkt /path/to/score.mscz
+;; Running from DrRacket: Language menu -> Choose Language... -> Show Details
+;; -> "Command-line arguments" field, put the path there (quoted, as Racket
+;; would parse argv), and the Run button will pass it through.
 (define SOURCE-SCORE
-  "/Users/tbh/Library/CloudStorage/Dropbox/music/MuseScore/ScoresMS4/TryArranging/See_my_friends_SATB_MS4.mscz"
-)
+  (let ([args (current-command-line-arguments)])
+    (if (> (vector-length args) 0)
+        (vector-ref args 0)
+        (error 'rehearsal-export
+               (string-append
+                "No source score given. Run with a path argument:\n"
+                "  racket rehearsal-export-ms3-workaround.rkt /path/to/score.mscz\n"
+                "From DrRacket: Language -> Choose Language... -> Show Details ->\n"
+                "\"Command-line arguments\", put the path there, then Run.")))))
 
 ;; Where all intermediate and final files go
 (define OUTPUT-DIR "rehearsal-mp3s-ms3")
