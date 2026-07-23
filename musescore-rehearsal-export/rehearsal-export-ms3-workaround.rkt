@@ -30,7 +30,10 @@
 ;; ---------- CONFIGURATION ----------
 
 ;; Original score (mscz or mscx), untouched throughout
-(define SOURCE-SCORE "See_my_friends_SATB_MS4.mscz")
+;(define SOURCE-SCORE "See_my_friends_SATB_MS4.mscz")
+(define SOURCE-SCORE
+  "/Users/tbh/Library/CloudStorage/Dropbox/music/MuseScore/ScoresMS4/TryArranging/See_my_friends_SATB_MS4.mscz"
+)
 
 ;; Where all intermediate and final files go
 (define OUTPUT-DIR "rehearsal-mp3s-ms3")
@@ -40,7 +43,7 @@
 
 ;; MIDI CC7 volume values (0-127)
 (define solo-volume "127")
-(define quiet-volume "30")
+(define quiet-volume "75")
 
 ;; CLI paths -- adjust to match your installs
 (define MSCORE4-CLI "/Applications/MuseScore 4.app/Contents/MacOS/mscore")
