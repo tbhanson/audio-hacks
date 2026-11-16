@@ -37,6 +37,14 @@ the featured voice loud, the others quiet, for one-voice-at-a-time practice.
   clustering near -53 to -54 dB (identical) vs. -13 to -19 dB for a
   correctly-separated MS3 export.
 
+- `mp3stats.sh` -- for a directory of audio files (mp3, m4a, wav, flac),
+  prints one summary line per file: duration, integrated loudness (LUFS),
+  loudness range (LRA), true peak (dBFS) and crest factor (peak minus RMS,
+  in dB). One ffmpeg pass per file. Files with a true peak above -1 dBFS
+  are flagged with `!`; a true peak above 0 means the decoded MP3 overshoots
+  full scale. Useful for a quick check for clipping and loudness differences
+  across versions of a piece.
+
   Usage:
   ```
   ./pairwise_diff.sh <directory-of-mp3s>
