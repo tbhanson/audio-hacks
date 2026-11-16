@@ -54,7 +54,7 @@
 
 ;; MIDI CC7 volume values (0-127)
 (define solo-volume "127")
-(define quiet-volume "75")
+(define quiet-volume "50")
 
 ;; CLI paths -- adjust to match your installs
 (define MSCORE4-CLI "/Applications/MuseScore 4.app/Contents/MacOS/mscore")
