@@ -41,3 +41,10 @@ the featured voice loud, the others quiet, for one-voice-at-a-time practice.
   ```
   ./pairwise_diff.sh <directory-of-mp3s>
   ```
+
+## Related
+
+- [audio-catalog](https://github.com/tbhanson/audio-catalog): catalogs
+  audio files into SQLite (size, duration, tags) and estimates speech,
+  music, noise and silence per file. Lives in its own repo because it is
+  a multi-module program, not a single script.
